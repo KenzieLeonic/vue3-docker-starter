@@ -1,26 +1,34 @@
 <script setup>
+//ใส่คำสั่ง js
+//หน้าหลักให้ใส่ folder components แต่ หน้าเสริมให้ใช้ view
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue' //import file จาก hello world
+import Profile from "@/components/Profile.vue"
 </script>
 
 <template>
   <header>
+<!--    @ = vite.config.js (sources)-->
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <HelloWorld msg="Hello World!" />
       <HelloWorld msg="You did it!" />
-
+      <Profile class="block"></Profile>
       <nav>
+<!--        Link ไปที่ url-->
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/rewards">Reward</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <RouterView/>
 </template>
 
 <style scoped>
+/*จัด style */
 header {
   line-height: 1.5;
   max-height: 100vh;

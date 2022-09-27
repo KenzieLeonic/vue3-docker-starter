@@ -5,9 +5,12 @@ export const useCounterStore = defineStore({
   state: () => ({
     counter: 0
   }),
+  //ให้ getter
   getters: {
-    doubleCount: (state) => state.counter * 2
+
+    doubleCount: (state) => state.counter * 2 //ใช้เหมือนกับ parameter state
   },
+  //ให้แก้ไข
   actions: {
     increment() {
       this.counter++

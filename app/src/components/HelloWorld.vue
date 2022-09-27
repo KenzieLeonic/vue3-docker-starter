@@ -1,4 +1,5 @@
 <script setup>
+//เอา msg มาแสดงผล
 defineProps({
   msg: {
     type: String,
